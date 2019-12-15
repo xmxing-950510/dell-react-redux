@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// import TodoList from './pre_1.0_redux-thunk/redux-todo';  //for thunk
+import TodoList from './pre_2.0_redux-saga/redux-todo'; // for saga
+// import TodoList from './Pre_3.0_react-redux/TodoList'
+// import { Provider } from 'react-redux';
+// import store from './Pre_3.0_react-redux/store';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+// const App = (
+// 	<Provider store={store}>
+// 		<TodoList />
+// 	</Provider>
+// );
+
+ReactDOM.render( <TodoList />, document.getElementById('root')); //for react-redux
+
+
