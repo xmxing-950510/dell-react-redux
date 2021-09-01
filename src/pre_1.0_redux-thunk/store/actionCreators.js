@@ -14,11 +14,13 @@ export const getDeleteAction = (index) =>({
     type: DELETE_TODO_ITEM,
     index
 })
+// actionCreator中的函数返回一个action对象，
 export const initListAction = (data) =>({
     type: INIT_LIST_ACTION,
     data
 })
-//因为引入了 redux-thunk， action还可以为一个函数
+//引入了 redux-thunk， 返回一个函数，有dispatch参数。
+// 该函数可以写异步操作，获取action，再派发action。
 export const getTodoList = () =>{
     return (dispatch) => {
     	axios.get('./list.json').then((res)=>{
